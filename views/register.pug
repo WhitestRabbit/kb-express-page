@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .d-flex.justify-content-center
+        .card.flex-fill
+            .card-body
+                .card-title
+                    h1.display-4 #{title}
+                .card.text
+                    form(method='POST', action='/users/register')
+                        .form-group
+                            label Name
+                            input.form-control(name='name', type='text')
+                        .form-group
+                            label Username
+                            input.form-control(name='username', type='text')
+                        .form-group
+                            label Email
+                            input.form-control(name='email', type='email')
+                        .form-group
+                            label Password
+                            input.form-control(name='password1', type='password')
+                        .form-group
+                            label Confirm Password
+                            input.form-control(name='password2', type='password')
+                        input.btn.btn-primary(type='submit', value='Register new user')

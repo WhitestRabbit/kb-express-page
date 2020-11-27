@@ -1,0 +1,27 @@
+{
+  "name": "nodekb",
+  "version": "1.0.0",
+  "description": "Simple knowledge base app, with login, registration and access control, creating, reading, updating and deleting articles. Using Node, Express, Pug, bcryptjs, passport and other libraries to make this website work as intended.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "stefanos",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "jquery": "^3.5.1",
+    "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.0"
+  }
+}

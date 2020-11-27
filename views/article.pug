@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.display-3= article.title
+    p.text-muted= 'Written by '+author
+    p.lead= article.body
+    hr
+    .row
+        if user
+            if user.id == article.author
+                a.col-3.offset-2.btn.btn-outline-primary(href="/articles/edit/"+article._id) Edit Article
+                a.col-3.offset-2.btn.btn-outline-danger#delete-article(href="#", data-id=article._id) Delete Article

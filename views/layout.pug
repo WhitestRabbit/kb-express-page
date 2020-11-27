@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title Knowledge Base
+        link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="/css/styles.css")
+    body
+        include includes/nav.pug
+        .container
+            != messages('includes/msg.pug', locals)
+            if errors
+                each error, i in errors
+                    div(class="alert alert-danger") #{error.msg}
+            block content
+        include includes/foot.pug
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', crossorigin='anonymous')
+        script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+        script(src="/js/main.js")

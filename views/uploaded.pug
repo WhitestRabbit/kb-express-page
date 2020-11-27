@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.display-3 #{title}
+    ul.list-group
+        each article, i in articles
+            if user.id == article.author
+                li.list-group-item 
+                    a(href='/articles/'+article._id)= article.title

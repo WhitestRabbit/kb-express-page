@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .d-flex.justify-content-center
+        .card.flex-fill
+            .card-body
+                .card-title
+                    h1.display-4 #{title}
+                .card.text
+                    form(method='POST', action='/users/login')
+                        .form-group
+                            label Username
+                            input.form-control(name='username', type='text')
+                        .form-group
+                            label Password
+                            input.form-control(name='password', type='password')
+                        input.btn.btn-primary(type='submit', value='Login')

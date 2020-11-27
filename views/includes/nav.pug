@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='/') Knowledge Base
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavAltMarkup.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.nav-link(href='/') Home
+                    if user
+                        li.nav-item
+                            a.nav-link(href='/articles/add') Add Article
+                ul.navbar-nav
+                    if user
+                        li.nav-item
+                            a.nav-link(href='/articles/uploaded/'+user._id) #{user.username}'s articles
+                        li.nav-item
+                            a.nav-link(href='/users/logout') Logout
+                    else
+                        li.nav-item
+                            a.nav-link(href='/users/register') Register 
+                        li.nav-item
+                            a.nav-link(href='/users/login') Login
