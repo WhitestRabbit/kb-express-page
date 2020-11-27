@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Simple knowledge base app, with login, registration and access control, creating, reading, updating and deleting articles. Using Node, Express, Pug, bcryptjs, passport and other libraries to make this website work as intended.",
   "main": "app.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.14.x"
+  },
   "scripts": {
     "start": "node app",
     "dev": "nodemon app"
