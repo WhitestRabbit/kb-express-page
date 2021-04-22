@@ -1,5 +1,5 @@
 # Bower dependency directory (https://bower.io/)
-bower_components
+public/bower_components/
 
 # Dependency directories
 node_modules/
